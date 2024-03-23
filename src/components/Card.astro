@@ -1,0 +1,16 @@
+---
+import {TypeCard} from "../enums/cardEnums"
+interface Props {
+	type: TypeCard
+}
+
+const { type } = Astro.props;
+---
+
+<section class={`${type===TypeCard.BIG?'w-[400px] h-[400px]':'w-[200px] h-[200px]'} bg-blue-600
+			    flex justify-center items-center rounded-xl	relative cursor-pointer hover:bg-blue-400`
+		  }>
+		  <img class="w-[50%] h-[50%] text-white" src="/public/mail-logo.png" alt="" srcset="" >
+		  <span class="absolute left-4 bottom-4 text-[24px]"> Mail </span>	
+</section>
+
