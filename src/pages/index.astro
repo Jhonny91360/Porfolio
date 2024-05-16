@@ -1,11 +1,44 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import { TypeCard } from '../enums/cardEnums';
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import { TypeCard } from '../enums/cardEnums'
+import { IoMdMail } from 'react-icons/io'
+import About from '../components/About.astro'
+import { GrProjects } from 'react-icons/gr'
+import { SlSocialFacebook } from 'react-icons/sl'
+import { SlSocialLinkedin } from 'react-icons/sl'
+import { FaInstagram } from 'react-icons/fa6'
+import { FaGithub } from 'react-icons/fa'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<Card type={TypeCard.BIG}/>
-	</main>
+<Layout title='Welcome to Astro.'>
+  <main>
+    <section class='flex flex-col gap-4'>
+      <About />
+      <div class='flex gap-2'>
+        <Card type={TypeCard.BIG} name='Proyectos' className='text-white'>
+          <GrProjects slot='icon' color='#fff' size={250} />
+        </Card>
+        <Card type={TypeCard.TINY} name='Correo' className='text-white'>
+          <IoMdMail slot='icon' color='#fff' size={100} />
+        </Card>
+        <Card
+          type={TypeCard.BIG}
+          name='Redes sociales'
+          className='text-white bg-orange-600 hover:bg-orange-400'
+        >
+          <div class='flex flex-col gap-6' slot='icon'>
+            <div class='flex gap-6'>
+              <FaGithub slot='icon' color='#fff' size={100} />
+              <SlSocialLinkedin slot='icon' color='#fff' size={100} />
+            </div>
+            <div class='flex gap-6'>
+              <SlSocialFacebook slot='icon' color='#fff' size={100} />
+              <FaInstagram slot='icon' color='#fff' size={100} />
+            </div>
+          </div>
+        </Card>
+      </div>
+    </section>
+  </main>
 </Layout>

@@ -1,4 +1,4 @@
-export enum TypeCard{
-    BIG='big',
-    TINY='tiny'
+export enum TypeCard {
+  BIG = 'big',
+  TINY = 'tiny'
 }
