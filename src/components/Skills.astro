@@ -1,0 +1,79 @@
+---
+import { TypeCard } from '../enums/cardEnums'
+import Card from './Card.astro'
+import { FaReact } from 'react-icons/fa'
+import { IoLogoJavascript } from 'react-icons/io5'
+import { RiTailwindCssFill } from 'react-icons/ri'
+import { RiNextjsFill } from 'react-icons/ri'
+import { FaHtml5 } from 'react-icons/fa'
+import { SiRedux } from 'react-icons/si'
+import { SiTypescript } from 'react-icons/si'
+import { FaNode } from 'react-icons/fa6'
+import { SiNestjs } from 'react-icons/si'
+import { SiPostgresql } from 'react-icons/si'
+import { FaDocker } from 'react-icons/fa'
+
+interface Props {
+  className?: string
+}
+const { className } = Astro.props
+---
+
+<section>
+  <Card
+    name='Tecnologías'
+    type={TypeCard.BIG}
+    className={`text-white w-full bg-green-600 hover:bg-green-600 pointer-events-none ${className}`}
+  >
+    <div class='flex flex-col gap-4 pointer-events-auto' slot='icon'>
+      <div class='flex gap-8'>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <FaReact color='' size={50} />
+          <span>React</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <IoLogoJavascript color='' size={50} />
+          <span>Javascript</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <RiTailwindCssFill color='' size={50} />
+          <span>Tailwind</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <RiNextjsFill color='' size={50} />
+          <span>Nextjs</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <FaHtml5 color='' size={50} />
+          <span>Html</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <SiRedux color='' size={50} />
+          <span>Redux</span>
+        </div>
+      </div>
+      <div class='flex gap-12 justify-center'>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <SiTypescript color='' size={50} />
+          <span>Typescript</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <FaNode color='' size={50} />
+          <span>Nodejs</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <SiNestjs color='' size={50} />
+          <span>Nestjs</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <SiPostgresql color='' size={50} />
+          <span>Postgresql</span>
+        </div>
+        <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
+          <FaDocker color='' size={50} />
+          <span>Docker</span>
+        </div>
+      </div>
+    </div>
+  </Card>
+</section>

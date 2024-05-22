@@ -2,15 +2,22 @@
 // const { type, name, className } = Astro.props
 ---
 
-<section class='w-full h-[350px] bg-purple-500 flex gap-2 rounded-xl overflow-hidden p-4'>
-  <div class='flex flex-col w-[70%] gap-2 h-full'>
-    <div class='h-[50%]'></div>
-    <div class='h-[50%] text-white'>
+<section
+  class='w-full h-min-[300px] h-full bg-purple-950 flex md:flex-row md:justify-between flex-col gap-2 rounded-xl overflow-hidden p-4'
+>
+  <div class='flex flex-col w-full md:w-[70%] gap-2 h-full self-center md:self-end'>
+    <div class='h-[50%] bg-red-500'></div>
+    <div class='h-full text-white flex flex-col p-2'>
       <h1 class='text-[28px]'>👋 Hola soy Jhonny</h1>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis culpa delectus quibusdam ad aliquam
-      asperiores voluptatum laborum veritatis, illo deleniti eum facere odit, dignissimos ipsum commodi
-      blanditiis perferendis. Amet, velit.
+      <p class=''>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis culpa delectus quibusdam ad
+        aliquam asperiores voluptatum laborum veritatis, illo deleniti eum facere odit, dignissimos
+        ipsum commodi blanditiis perferendis. Amet, velit.
+      </p>
     </div>
   </div>
-  <img src='https://cdn-icons-png.flaticon.com/512/1488/1488581.png' />
+  <img
+    class='hidden md:block h-[200px] w-[200px]'
+    src='https://cdn-icons-png.flaticon.com/512/1488/1488581.png'
+  />
 </section>

@@ -9,19 +9,31 @@ import { SlSocialFacebook } from 'react-icons/sl'
 import { SlSocialLinkedin } from 'react-icons/sl'
 import { FaInstagram } from 'react-icons/fa6'
 import { FaGithub } from 'react-icons/fa'
+import { IoMdContacts } from 'react-icons/io'
+import { IoDocumentText } from 'react-icons/io5'
+import { FaClipboardList } from 'react-icons/fa6'
+import { FaChildReaching } from 'react-icons/fa6'
+import { IoCreateSharp } from 'react-icons/io5'
+import Skills from '../components/Skills.astro'
 ---
 
 <Layout title='Welcome to Astro.'>
   <main>
-    <section class='flex flex-col gap-4'>
+    <section class='flex flex-col gap-4 p-4'>
       <About />
-      <div class='flex gap-2'>
+      <!-- <div class='flex gap-2'>
         <Card type={TypeCard.BIG} name='Proyectos' className='text-white'>
           <GrProjects slot='icon' color='#fff' size={250} />
         </Card>
-        <Card type={TypeCard.TINY} name='Correo' className='text-white'>
-          <IoMdMail slot='icon' color='#fff' size={100} />
-        </Card>
+        <div class='flex flex-col gap-2'>
+          <Card type={TypeCard.TINY} name='Contacto' className='text-white'>
+            <IoMdContacts slot='icon' color='#fff' size={100} />
+          </Card>
+          <Card type={TypeCard.TINY} name='Descargar C.V' className='text-white'>
+            <IoDocumentText slot='icon' color='#fff' size={100} />
+          </Card>
+        </div>
+
         <Card
           type={TypeCard.BIG}
           name='Redes sociales'
@@ -39,6 +51,26 @@ import { FaGithub } from 'react-icons/fa'
           </div>
         </Card>
       </div>
+      <div class='flex gap-2'>
+        <Skills className='w-[600px]' />
+        <div class='flex flex-col gap-2'>
+          <Card
+            type={TypeCard.TINY}
+            name='Experiencia'
+            className='text-white w-[400px] bg-purple-500 hover:bg-purple-300'
+          >
+            <FaClipboardList slot='icon' color='#fff' size={100} />
+          </Card>
+          <div class='flex gap-2'>
+            <Card type={TypeCard.TINY} name='Formación' className='text-white '>
+              <FaChildReaching slot='icon' color='#fff' size={100} />
+            </Card>
+            <Card type={TypeCard.TINY} name='Servicios' className='text-white'>
+              <IoCreateSharp slot='icon' color='#fff' size={100} />
+            </Card>
+          </div>
+        </div>
+      </div> -->
     </section>
   </main>
 </Layout>
