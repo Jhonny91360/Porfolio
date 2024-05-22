@@ -23,10 +23,10 @@ const { className } = Astro.props
   <Card
     name='Tecnologías'
     type={TypeCard.BIG}
-    className={`text-white w-full bg-green-600 hover:bg-green-600 pointer-events-none ${className}`}
+    className={`text-white  bg-green-600 hover:bg-green-600 pointer-events-none ${className} w-[320px]`}
   >
     <div class='flex flex-col gap-4 pointer-events-auto' slot='icon'>
-      <div class='flex gap-8'>
+      <div class='flex flex-wrap gap-8 justify-center'>
         <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
           <FaReact color='' size={50} />
           <span>React</span>
@@ -52,7 +52,7 @@ const { className } = Astro.props
           <span>Redux</span>
         </div>
       </div>
-      <div class='flex gap-12 justify-center'>
+      <div class='flex flex-wrap gap-12 justify-center'>
         <div class='flex flex-col justify-start items-center gap-1 hover:text-black'>
           <SiTypescript color='' size={50} />
           <span>Typescript</span>

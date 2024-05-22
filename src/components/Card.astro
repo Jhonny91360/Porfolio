@@ -9,10 +9,10 @@ const { type, name, className } = Astro.props
 ---
 
 <section
-  class={`${type === TypeCard.BIG ? 'w-[400px] h-[400px]' : 'w-[200px] h-[196px]'}
+  class={`${type === TypeCard.BIG ? 'w-[320px] md:w-[400px] h-[300px] md:h-[400px]' : 'w-[155px] md:w-[200px] h-[150px] md:h-[196px]'}
          bg-blue-600 hover:bg-blue-400
 			    flex justify-center items-center rounded-xl	relative cursor-pointer ${className}`}
 >
   <slot name='icon' />
-  <span class='absolute left-4 bottom-4 text-[24px]'>{name}</span>
+  <span class='absolute left-4 bottom-4 text-[16px] md:text-[24px]'>{name}</span>
 </section>
