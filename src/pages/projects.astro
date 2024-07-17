@@ -1,9 +1,72 @@
 ---
+import ProjectCard from '../components/ProjectCard.astro'
 import Layout from '../layouts/Layout.astro'
+import { GrProjects } from 'react-icons/gr'
+
+const projects = [
+  {
+    title: 'Teesa',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
+    technologies: ['React', 'Node', 'Tailwind'],
+    image: '/public/teesa-project.webp',
+    githubLink: 'https://github.com/Jhonny91360/Teesa_backend_SQL'
+  },
+  {
+    title: 'Movies App',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
+    technologies: ['React', 'Node', 'Tailwind'],
+    image: '/public/movie-box-project.webp',
+    githubLink: 'https://github.com/Jhonny91360/movie-app'
+  },
+  {
+    title: 'Food App',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
+    technologies: ['React', 'Node', 'Tailwind'],
+    image: '/public/food-app-project.webp',
+    githubLink: 'https://github.com/Jhonny91360/PI_Foods_APP'
+  },
+  {
+    title: 'Reminder App',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
+    technologies: ['React', 'Node', 'Tailwind'],
+    image: '/public/reminder-app-project.webp',
+    githubLink: 'https://github.com/Jhonny91360/Reminder-app'
+  },
+  {
+    title: 'Porfolio',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
+    technologies: ['React', 'Node', 'Tailwind'],
+    image: '/public/porfolio-project.webp',
+    githubLink: 'https://github.com/Jhonny91360/Porfolio'
+  }
+]
 ---
 
 <Layout title='Jhonny'>
-  <main>
-    <section class='bg-white w-[400px]'>hola</section>
+  <main class='p-2 md:p-4'>
+    <header class='w-[400px] flex gap-8 items-center my-[30px] md:ml-8'>
+      <GrProjects color='#fff' size={30} />
+      <span class='text-white text-4xl'>Proyectos</span>
+    </header>
+    <section class='flex flex-col gap-8'>
+      {
+        projects.map(project => {
+          return (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              technologies={project.technologies}
+              githubLink={project.githubLink}
+            />
+          )
+        })
+      }
+    </section>
   </main>
 </Layout>
