@@ -7,42 +7,42 @@ const projects = [
   {
     title: 'Teesa',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
-    technologies: ['React', 'Node', 'Tailwind'],
+      'Tienda virtual para compra de equipos y repuestos de la industria alimenticia. Encuentra aquí lo que tu cocina necesita',
+    technologies: ['React', 'Node', 'Tailwind', 'Express', 'PostgreSQL', 'Sequelize'],
     image: '/public/teesa-project.webp',
-    githubLink: 'https://github.com/Jhonny91360/Teesa_backend_SQL'
+    githubLink: 'https://github.com/Jhonny91360/Teesa_backend_SQL',
+    deploy: 'https://www.youtube.com/watch?v=dADT42DSssU'
   },
   {
     title: 'Movies App',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
-    technologies: ['React', 'Node', 'Tailwind'],
+    description: 'Aplicativo web con cientos de películas, series, video juegos y más.',
+    technologies: ['Redux toolkit', 'Tailwind', 'React', 'Html', 'CSS'],
     image: '/public/movie-box-project.webp',
-    githubLink: 'https://github.com/Jhonny91360/movie-app'
-  },
-  {
-    title: 'Food App',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
-    technologies: ['React', 'Node', 'Tailwind'],
-    image: '/public/food-app-project.webp',
-    githubLink: 'https://github.com/Jhonny91360/PI_Foods_APP'
+    githubLink: 'https://github.com/Jhonny91360/movie-app',
+    deploy: 'https://movie-app-three-dusky.vercel.app/'
   },
   {
     title: 'Reminder App',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
-    technologies: ['React', 'Node', 'Tailwind'],
+    description: 'Aplicativo móvil que te ayuda a recordar tareas en el día a día ',
+    technologies: ['React Native', 'Typescript', 'SQLite', 'CSS'],
     image: '/public/reminder-app-project.webp',
     githubLink: 'https://github.com/Jhonny91360/Reminder-app'
   },
   {
+    title: 'Food App',
+    description: 'Encuentra recetas de todas partes del mundo o crea tu propia receta y compártela',
+    technologies: ['Redux', 'React', 'Node', 'Express', 'PostgreSQL', 'Sequelize'],
+    image: '/public/food-app-project.webp',
+    githubLink: 'https://github.com/Jhonny91360/PI_Foods_APP',
+    deploy: 'https://pi-foods-acx0ue8el-jhonny91360.vercel.app'
+  },
+  {
     title: 'Porfolio',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, illum voluptatem in rerum molestias eos velit beatae eaque recusandae iste modi. Officia aspernatur vel possimus nostrum consectetur earum quis sint.',
-    technologies: ['React', 'Node', 'Tailwind'],
+    description: 'Mi porfolio donde doy a conocer mi perfil profesional como desarrollador web',
+    technologies: ['Astro', 'React', 'Tailwind', 'Javascript', 'HTML'],
     image: '/public/porfolio-project.webp',
-    githubLink: 'https://github.com/Jhonny91360/Porfolio'
+    githubLink: 'https://github.com/Jhonny91360/Porfolio',
+    deploy: '/'
   }
 ]
 ---
@@ -63,6 +63,7 @@ const projects = [
               image={project.image}
               technologies={project.technologies}
               githubLink={project.githubLink}
+              deploy={project.deploy}
             />
           )
         })
