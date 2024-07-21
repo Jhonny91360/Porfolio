@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string
+  information: string
+  href: string
+}
+const { title, information, href } = Astro.props
+---
+
+<a href={href} class='cursor-pointer' target='_blank'>
+  <section class='flex justify-start gap-2'>
+    <div class='bg-teal-500 rounded-full p-4'>
+      <slot name='icon' />
+    </div>
+    <div class='flex flex-col gap-2'>
+      <span class='text-2xl font-bold text-white'>{title}</span>
+      <span class='text-xl text-white'>{information}</span>
+    </div>
+  </section>
+</a>
