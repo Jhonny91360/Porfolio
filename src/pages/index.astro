@@ -43,12 +43,24 @@ import Skills from '../components/Skills.astro'
           </Card>
           <!--  -->
           <!-- desktop download cv -->
-          <Card type={TypeCard.TINY} name='Descargar C.V' className='text-white hidden md:flex'>
+          <Card
+            type={TypeCard.TINY}
+            name='Descargar C.V'
+            className='text-white hidden md:flex'
+            href='/public/CV-JhonnyZambranoSaavedra.pdf'
+            target_blank={true}
+          >
             <IoDocumentText slot='icon' color='#fff' size={100} />
           </Card>
           <!--  -->
           <!-- mobile download cv -->
-          <Card type={TypeCard.TINY} name='⬇︎ C.V' className='text-white block md:hidden'>
+          <Card
+            type={TypeCard.TINY}
+            name='⬇︎ C.V'
+            className='text-white block md:hidden'
+            href='/public/CV-JhonnyZambranoSaavedra.pdf'
+            target_blank={true}
+          >
             <IoDocumentText slot='icon' color='#fff' size={50} />
           </Card>
           <!--  -->
@@ -58,16 +70,40 @@ import Skills from '../components/Skills.astro'
         <Card
           type={TypeCard.BIG}
           name='Redes sociales'
-          className='text-white md:w-[408px] bg-orange-600 hover:bg-orange-400 hidden md:flex'
+          className='text-white md:w-[408px] bg-orange-600 hover:bg-orange-600 hidden md:flex cursor-default'
         >
           <div class='flex flex-col gap-6' slot='icon'>
             <div class='flex gap-6'>
-              <FaGithub slot='icon' color='#fff' size={100} />
-              <SlSocialLinkedin slot='icon' color='#fff' size={100} />
+              <a
+                href='https://github.com/Jhonny91360'
+                target='_blank'
+                class='transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'
+                ><FaGithub slot='icon' color='#fff' size={100} />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/jhonnyzamsa/'
+                target='_blank'
+                class='transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'
+              >
+                <SlSocialLinkedin slot='icon' color='#fff' size={100} />
+              </a>
             </div>
+
             <div class='flex gap-6'>
-              <SlSocialFacebook slot='icon' color='#fff' size={100} />
-              <FaInstagram slot='icon' color='#fff' size={100} />
+              <a
+                href='https://www.facebook.com/JhonnyZam/'
+                target='_blank'
+                class='transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'
+              >
+                <SlSocialFacebook slot='icon' color='#fff' size={100} />
+              </a>
+              <a
+                href='https://www.instagram.com/jhonny0920/'
+                target='_blank'
+                class='transform transition-transform duration-300 hover:scale-105 hover:shadow-lg'
+              >
+                <FaInstagram slot='icon' color='#fff' size={100} />
+              </a>
             </div>
           </div>
         </Card>
@@ -76,16 +112,24 @@ import Skills from '../components/Skills.astro'
         <Card
           type={TypeCard.BIG}
           name='Redes sociales'
-          className='text-white bg-orange-600 hover:bg-orange-400 block md:hidden'
+          className='text-white bg-orange-600 hover:bg-orange-600 block md:hidden'
         >
-          <div class='flex flex-col gap-6' slot='icon'>
-            <div class='flex gap-6'>
-              <FaGithub slot='icon' color='#fff' size={50} />
-              <SlSocialLinkedin slot='icon' color='#fff' size={50} />
+          <div class='flex flex-col gap-6 justify-center items-center' slot='icon'>
+            <div class='flex gap-6 justify-center items-center pr-5'>
+              <a href='https://github.com/Jhonny91360' target='_blank'>
+                <FaGithub slot='icon' color='#fff' size={50} />
+              </a>
+              <a href='https://www.linkedin.com/in/jhonnyzamsa/' target='_blank'>
+                <SlSocialLinkedin slot='icon' color='#fff' size={50} />
+              </a>
             </div>
-            <div class='flex gap-6'>
-              <SlSocialFacebook slot='icon' color='#fff' size={50} />
-              <FaInstagram slot='icon' color='#fff' size={50} />
+            <div class='flex gap-6 justify-center'>
+              <a href='https://www.facebook.com/JhonnyZam/' target='_blank'>
+                <SlSocialFacebook slot='icon' color='#fff' size={50} />
+              </a>
+              <a href='https://www.instagram.com/jhonny0920/' target='_blank'>
+                <FaInstagram slot='icon' color='#fff' size={50} />
+              </a>
             </div>
           </div>
         </Card>
