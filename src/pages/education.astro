@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { FaChildReaching } from 'react-icons/fa6'
+import EducantionItem from '../components/EducationItem.astro'
+
+const EDUCATION = [
+  {
+    date: 'Marzo/2021 - Actualmente',
+    title: 'Ingeniero de software',
+    company: 'Politécnico Grancolombiano',
+    description:
+      'El ingeniero de software es un profesional que se encarga de automatizar servicios en cualquier sector de la economía y gestionar, gerenciar o asesorar de tecnologías en diseño, arquitectura, desarrollo de software y manejo de las TIC, está capacitado para mejorar el diseño de aplicaciones, crear e implementar soluciones de software adaptando los servicios generados para la finalidades y objetivos de creación, creando soluciones de programación y computo en las nuevas exigencias y eras digitales.',
+    link: 'https://www.poli.edu.co/'
+  },
+  {
+    date: 'Febrero/2009 - Diciembre/2012',
+    title: 'Tecnólogo en electrónica',
+    company: 'Univesidad del Valle',
+    description:
+      'El tecnólogo en electrónica es un profesional especializado en el diseño, desarrollo y mantenimiento de sistemas electrónicos. Construye y analiza sistemas analógicos, digitales y de señal mixta, considerando tecnologías hardware/softwares disponibles. Implementa y opera sistemas de automatización, instrumentación y control, considerando conceptos y tecnologías propios de sistemas tales como: SCADA, buses de procesos, PLCs y sistemas distribuidos. Su conocimiento en tecnologías avanzadas le permite implementar soluciones innovadoras y adaptarlas a las necesidades específicas de cada proyecto. ',
+    link: 'https://www.univalle.edu.co/'
+  }
+]
+---
+
+<Layout title='Jhonny'>
+  <main class='p-2 md:p-4'>
+    <header class='w-[400px] flex gap-8 items-center my-[30px] md:ml-8'>
+      <FaChildReaching color='#fff' size={30} />
+      <span class='text-white text-4xl whitespace-nowrap'>Educación profesional</span>
+    </header>
+  </main>
+  <section>
+    <ol class='relative flex flex-col gap-8'>
+      {
+        EDUCATION.map(education => (
+          <li class=''>
+            <EducantionItem {...education} />
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</Layout>

@@ -1,0 +1,55 @@
+---
+import type { AstroVNode } from 'astro/jsx-runtime'
+import BraceIcon from './BraceIcon.astro'
+import LinkInline from './LinkInline.astro'
+
+interface Props {
+  title: string
+  company: string
+  description: string
+  link?: string
+  date: string
+}
+
+const { title, company, description, link, date } = Astro.props
+---
+
+<div
+  class="relative bg-black/100 border-b-2 border-t-2 p-4 rounded-lg border-slate-600 mx-4 grid before:absolute before:left-[-35px] before:block before:h-full before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+>
+  <div class='relative pb-12 md:col-span-2'>
+    <div class='sticky top-0 flex flex-col md:h-full'>
+      <h3 class='text-xl font-bold text-yellow-400'>{title}</h3>
+      <h4 class='font-semibold text-xl text-white/95'>{company}</h4>
+      <time class='p-0 m-0 text-sm text-white/95'>{date}</time>
+    </div>
+  </div>
+  <div class='relative flex flex-col gap-2 pb-4 text-white/95 md:col-span-3'>
+    {description}
+
+    {
+      link && (
+        <LinkInline href={link}>
+          Saber más{' '}
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='w-5 icon icon-tabler icon-tabler-chevron-right'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            stroke-width='2'
+            stroke='currentColor'
+            fill='none'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+          >
+            <>
+              <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+              <path d='M9 6l6 6l-6 6' />
+            </>
+          </svg>
+        </LinkInline>
+      )
+    }
+  </div>
+</div>

@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { FaClipboardList } from 'react-icons/fa6'
+import ExperienceItem from '../components/ExperienceItem.astro'
+import BraceIcon from '../components/BraceIcon.astro'
+const EXPERIENCIE = [
+  {
+    date: 'Octubre/2023 - Actualmente',
+    title: 'Desarrollador full-stack',
+    company: 'Brace Developers',
+    Icon: BraceIcon,
+    description:
+      'Como desarrollador web full stack en la empresa Brace Developers, me he especializado en el diseño, desarrollo y mantenimiento de aplicaciones web personalizadas para una variedad de clientes en diferentes industrias. Mi rol incluye:',
+    link: 'https://www.bracedevelopers.com/en',
+    items: [
+      {
+        title: 'Desarrollo Frontend y Backend: ',
+        description:
+          ' Utilizo tecnologías como HTML, CSS, JavaScript, React, Next.js y NestJS y bases de datos como PostgreSQL para construir aplicaciones web escalables y eficientes.'
+      },
+      {
+        title: 'Integración de API y Servicios Web: ',
+        description:
+          ' Implemento y gestiono la integración de diversas API y servicios web para asegurar la funcionalidad y conectividad de las aplicaciones.'
+      },
+      {
+        title: 'Colaboración en Equipos Multifuncionales: ',
+        description:
+          ' Trabajo en estrecha colaboración con diseñadores, gestores de proyectos y otros desarrolladores para garantizar que los proyectos cumplan con los requisitos y expectativas de los clientes.'
+      },
+      {
+        title: 'Mejora Continua: ',
+        description:
+          ' Participo en la revisión de código, pruebas y depuración para mejorar la calidad del software y optimizar el rendimiento.'
+      },
+      {
+        title: 'Gestión de Proyectos: ',
+        description:
+          ' Utilizo metodologías ágiles para gestionar y priorizar tareas, asegurando la entrega oportuna de proyectos dentro del presupuesto establecido.'
+      }
+    ]
+  }
+]
+---
+
+<Layout title='Jhonny'>
+  <main class='p-2 md:p-4'>
+    <header class='w-[400px] flex gap-8 items-center my-[30px] md:ml-8'>
+      <FaClipboardList color='#fff' size={30} />
+      <span class='text-white text-4xl'>Experiencia</span>
+    </header>
+  </main>
+  <section>
+    <ol class='relative'>
+      {
+        EXPERIENCIE.map(experiencie => (
+          <li class=''>
+            <ExperienceItem {...experiencie} />
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</Layout>

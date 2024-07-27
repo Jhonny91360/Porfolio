@@ -70,7 +70,7 @@ import Skills from '../components/Skills.astro'
         <Card
           type={TypeCard.BIG}
           name='Redes sociales'
-          className='text-white md:w-[408px] bg-orange-600 hover:bg-orange-600 hidden md:flex cursor-default'
+          className='text-white md:w-[408px] bg-orange-600 hover:bg-orange-700 hidden md:flex cursor-default'
         >
           <div class='flex flex-col gap-6' slot='icon'>
             <div class='flex gap-6'>
@@ -150,6 +150,7 @@ import Skills from '../components/Skills.astro'
             type={TypeCard.TINY}
             name='Experiencia'
             className='text-white w-full max-w-[320px] md:max-w-none md:w-[408px] bg-purple-950  hover:bg-purple-300'
+            href='/experience'
           >
             <FaClipboardList className='hidden md:block' slot='icon' color='#fff' size={100} />
             <FaClipboardList className='block md:hidden' slot='icon' color='#fff' size={50} />
@@ -159,7 +160,12 @@ import Skills from '../components/Skills.astro'
           <!-- second row -->
           <div class='flex gap-2'>
             <!-- training -->
-            <Card type={TypeCard.TINY} name='Formación' className='text-white md:w-[196px]'>
+            <Card
+              type={TypeCard.TINY}
+              href='/education'
+              name='Formación'
+              className='text-white md:w-[196px]'
+            >
               <FaChildReaching className='hidden md:block' slot='icon' color='#fff' size={100} />
               <FaChildReaching className='block md:hidden' slot='icon' color='#fff' size={50} />
             </Card>
