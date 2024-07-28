@@ -30,11 +30,11 @@ const EDUCATION = [
       <span class='text-white text-4xl whitespace-nowrap'>Educación profesional</span>
     </header>
   </main>
-  <section>
+  <section class='overflow-x-hidden'>
     <ol class='relative flex flex-col gap-8'>
       {
-        EDUCATION.map(education => (
-          <li class=''>
+        EDUCATION.map((education, index) => (
+          <li class={`${index % 2 == 0 ? 'fromLeft' : 'fromRight'}`}>
             <EducantionItem {...education} />
           </li>
         ))
