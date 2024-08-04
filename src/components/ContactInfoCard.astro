@@ -7,9 +7,9 @@ interface Props {
 const { title, information, href } = Astro.props
 ---
 
-<a href={href} class='cursor-pointer' target='_blank'>
+<a href={href} class='cursor-pointer fromBottom' target='_blank'>
   <section class='flex justify-start gap-2'>
-    <div class='bg-teal-500 rounded-full p-4'>
+    <div class='bg-[#002c54] rounded-full p-4'>
       <slot name='icon' />
     </div>
     <div class='flex flex-col gap-2'>

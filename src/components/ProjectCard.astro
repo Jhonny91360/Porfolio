@@ -8,26 +8,27 @@ interface Props {
   image: string
   githubLink: string
   deploy?: string
+  className?: string
 }
-const { title, description, githubLink, image, technologies, deploy } = Astro.props
+const { title, description, githubLink, image, technologies, deploy, className } = Astro.props
 ---
 
 <section
-  class='flex flex-col gap-6 bg-black/100 border-b-2 border-t-2 border-slate-600 p-4 rounded-lg'
+  class={`flex flex-col  gap-6 bg-[#16253d] bg-opacity-5 backdrop-blur-custom  border-[#002c54] shadow-2xl p-4 rounded-lg ${className}`}
 >
   <header>
     <p class='text-3xl font-bold text-white'>
       {title}
     </p>
   </header>
-  <p class='text-2xl text-white'>
+  <p class='text-xl text-white'>
     {description}
   </p>
-  <div class='flex gap-2 flex-wrap text-white'>
+  <div class='flex gap-2 flex-wrap overflow-y-hidden text-white'>
     {
       technologies.map(technology => {
         return (
-          <span class='bg-indigo-100 text-indigo-800 text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300'>
+          <span class='bg-gradient-to-r fromLeft from-[#5a09ef] to-[#1a0538]  text-white text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300'>
             {technology}{' '}
           </span>
         )
@@ -35,11 +36,11 @@ const { title, description, githubLink, image, technologies, deploy } = Astro.pr
     }
   </div>
   <img src={image} alt='' srcset='' class='rounded shadow-2xl shadow-white/10' />
-  <div class='flex flex-col md:flex-row gap-8 items-center'>
+  <div class='flex flex-wrap gap-2 mt-auto items-center md:items-start text-[#efb509]'>
     {
       deploy && (
         <a
-          class='font-semibold text-white flex gap-2 items-center rounded-xl px-4 py-1 hover:bg-gray-300 hover:text-black'
+          class='font-semibold  flex gap-2 items-center rounded-xl px-4 py-1  hover:bg-gray-300 hover:text-black'
           target='_blank'
           href={deploy}
         >
@@ -49,7 +50,7 @@ const { title, description, githubLink, image, technologies, deploy } = Astro.pr
       )
     }
     <a
-      class='font-semibold text-white flex gap-2 items-center rounded-xl px-4 py-1 hover:bg-gray-300 hover:text-black'
+      class='font-semibold flex gap-2 items-center rounded-xl px-4 py-1 hover:bg-gray-300 hover:text-black'
       target='_blank'
       href={githubLink}
     >

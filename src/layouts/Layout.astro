@@ -11,7 +11,7 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang='es'>
+<html lang='es' class='customScrollbar'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />
@@ -35,7 +35,8 @@ const { title } = Astro.props
     font-family: 'Baloo 2 Variable', system-ui;
   }
   body {
-    background: #050505;
+    /* background: #050505; */
+    background: linear-gradient(to bottom, #0b121e, #16253d);
     display: flex;
 
     flex-direction: column;

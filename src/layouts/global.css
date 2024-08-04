@@ -43,3 +43,37 @@
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
 }
+
+/* scrollbar.css */
+
+.customScrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 4px;
+  /* Aplica el border-radius deseado */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(17, 33, 47, 1);
+  border-radius: 4px;
+  /* Aplica el border-radius deseado */
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #d0ced4;
+}
+
+.hiddenScrollbarHorizontal::-webkit-scrollbar:horizontal {
+  display: none;
+}
+.hiddenScrollbarVertical::-webkit-scrollbar:vertical {
+  display: none;
+}
+
+.backdrop-blur-custom {
+  backdrop-filter: blur(10px);
+}

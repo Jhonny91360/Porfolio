@@ -1,0 +1,33 @@
+---
+import { CiSquareCheck } from "react-icons/ci";
+
+
+interface Props {
+  Icon: React.ComponentType<any>
+  title: string
+  items: {
+    description: string
+  }[]
+  colorIcon:string
+}
+
+const { Icon, items, title,colorIcon } = Astro.props
+---
+
+<section class='relative flex flex-col items-start w-fit max-w-[300px] md:max-w-[360px] px-2 py-4 gap-2'>
+  <div class="mx-auto z-50">{(<Icon color={colorIcon} size=100 />)}</div>
+  <span class='text-white font-bold z-50 text-center mx-auto'>{title}</span>
+  {
+    items &&
+      items.map(item => {
+        return (
+          <div class='flex justify-center text-[14px] gap-4 py-2 items-start z-50'>
+           <CiSquareCheck color={colorIcon} size={20}/>
+
+            <span class='text-white w-[80%]'>{item.description}</span>
+          </div>
+        )
+      })
+  }
+  <div class="absolute z-0 inset-0 w-full h-full bg-[#16253d] bg-opacity-5 backdrop-blur-custom rounded-lg shadow-lg" ></div>
+</section>

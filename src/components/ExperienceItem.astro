@@ -1,6 +1,4 @@
 ---
-import type { AstroVNode } from 'astro/jsx-runtime'
-import BraceIcon from './BraceIcon.astro'
 import LinkInline from './LinkInline.astro'
 
 interface Props {
@@ -20,11 +18,11 @@ const { title, company, description, link, date, items, Icon } = Astro.props
 ---
 
 <div
-  class="relative bg-black/100 border-b-2 border-t-2 p-4 rounded-lg border-slate-600 mx-4 grid before:absolute before:left-[-35px] before:block before:h-full before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="bg-[#16253d] bg-opacity-5 backdrop-blur-custom border-y-2 border-[#002c54] shadow-xl relative p-4 rounded-lg mx-4 grid before:absolute before:left-[-35px] before:block before:h-full before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
 >
   <div class='relative pb-12 md:col-span-2'>
     <div class='sticky top-0 flex flex-col md:h-full'>
-      <h3 class='text-xl font-bold text-yellow-400'>{title}</h3>
+      <h3 class='text-xl font-bold text-[#cd7213]'>{title}</h3>
       <h4 class='font-semibold text-xl text-white/95'>{company}</h4>
       <time class='p-0 m-0 text-sm text-white/95'>{date}</time>
       <div class='mx-auto mt-4 md:mt-[50%]'>
@@ -39,7 +37,7 @@ const { title, company, description, link, date, items, Icon } = Astro.props
         items.map(item => {
           return (
             <div class='flex gap-2 justify-center py-2 items-start'>
-              <div class='bg-yellow-400 rounded-full mt-1 w-full max-w-4 h-full max-h-4 ' />
+              <div class='bg-[#cd7213] rounded-full mt-1 w-full max-w-4 h-full max-h-4 ' />
               <div class='flex flex-col gap-2'>
                 <span class='font-extrabold'>{item.title}</span>
                 <span>{item.description}</span>

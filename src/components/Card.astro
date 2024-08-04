@@ -13,7 +13,6 @@ const { type, name, className, href, target_blank } = Astro.props
 <a href={href} {...target_blank && { target: '_blank' }}>
   <section
     class={`${type === TypeCard.BIG ? 'w-[320px] md:w-[400px] h-[300px] md:h-[400px]' : 'w-[155px] md:w-[200px] h-[150px] md:h-[196px]'}
-         bg-blue-600 hover:bg-blue-400
 			    flex justify-center items-center rounded-xl	relative cursor-pointer active:animate-ping ${className}`}
   >
     <slot name='icon' />

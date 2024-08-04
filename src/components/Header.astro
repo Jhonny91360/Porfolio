@@ -1,5 +1,17 @@
+---
+// let open = false
+// const miDiv = document.getElementById('miDiv')
+// if (miDiv) {
+//   miDiv.addEventListener('click', () => {
+//     // Muestra un mensaje de alerta cuando se hace clic en el div
+//     alert('¡Hiciste clic en el div!')
+//   })
+// }
+---
+
+<!-- desktop -->
 <header
-  class='flex items-center justify-between px-6 py-3 w-[20%] min-w-[150px] md:w-[1024px] mx-auto'
+  class='hidden md:flex items-center justify-between px-6 py-3 w-[20%] min-w-[150px] md:w-[1024px] mx-auto bg-violet-400'
 >
   <img class='rounded-full hidden md:block w-20 h-20' src='/public/perfil.png' alt='' />
   <nav class='flex flex-col md:flex-row gap-10 opacity-80 text-white'>
@@ -10,3 +22,25 @@
     <a href='/contact'>Contacto</a>
   </nav>
 </header>
+<!-- mobile -->
+<!-- <header
+  class='md:hidden flex items-center justify-between px-6 py-3 w-[20%] min-w-[150px] md:w-[1024px] mx-auto bg-violet-400'
+>
+  {
+    !open ? (
+      <div class='cursor-pointer' id='miDiv'>
+        Desplegar
+      </div>
+    ) : (
+      <>
+        <nav class='flex flex-col md:flex-row gap-10 opacity-80 text-white'>
+          <a href='/'>Inicio</a>
+          <a href='/'>Sobre mí</a>
+          <a href='/projects'>Proyectos</a>
+          <a href='/experience'>Experiencia</a>
+          <a href='/contact'>Contacto</a>
+        </nav>{' '}
+      </>
+    )
+  }
+</header> -->

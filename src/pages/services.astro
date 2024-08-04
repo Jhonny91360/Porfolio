@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { IoCreateSharp } from 'react-icons/io5'
+import BraceIcon from '../components/BraceIcon.astro'
+import ServiceItem from '../components/ServiceItem.astro'
+import { MdWeb } from 'react-icons/md'
+import { FaMobileScreen } from 'react-icons/fa6'
+import { GrCloudComputer } from 'react-icons/gr'
+import { GrDocumentPerformance } from 'react-icons/gr'
+import { GrServerCluster } from 'react-icons/gr'
+import { MdSecurity } from 'react-icons/md'
+import { GrDocumentConfig } from 'react-icons/gr'
+import { MdCleaningServices } from 'react-icons/md'
+import { FaShoppingCart } from 'react-icons/fa'
+
+const SERVICES = [
+  {
+    title: 'Desarrollo de sitios web personalizados',
+    Icon: MdWeb,
+    colorIcon: '#14b8a6',
+    items: [
+      {
+        description:
+          'Diseño y desarrollo de sitios web adaptados a las necesidades específicas del cliente.'
+      },
+      {
+        description:
+          'Uso de tecnologías modernas como HTML5, CSS3, JavaScript, y frameworks como React, Angular o Vue.js.'
+      }
+    ]
+  },
+  {
+    title: 'Aplicaciones web y móviles',
+    Icon: FaMobileScreen,
+    colorIcon: '#cd7213',
+    items: [
+      {
+        description: 'Desarrollo de aplicaciones web interactivas y responsivas.'
+      },
+      {
+        description:
+          'Creación de aplicaciones móviles multiplataforma usando frameworks como React Native o Flutter.'
+      }
+    ]
+  },
+  {
+    title: 'Integración de APIs',
+    Icon: GrCloudComputer,
+    colorIcon: '#14b8a6',
+    items: [
+      {
+        description:
+          'Conexión de aplicaciones con servicios externos a través de APIs RESTful y GraphQL.'
+      },
+      {
+        description: 'Desarrollo de APIs personalizadas para funcionalidades específicas.'
+      }
+    ]
+  },
+  {
+    title: 'Optimización de rendimiento web',
+    Icon: GrDocumentPerformance,
+    colorIcon: '#efb509',
+    items: [
+      {
+        description: 'Mejora de la velocidad y el rendimiento de sitios web existentes.'
+      },
+      {
+        description:
+          'Implementación de técnicas de optimización como lazy loading, minificación de archivos, y caching.'
+      }
+    ]
+  },
+  {
+    title: 'Desarrollo de backend',
+    Icon: GrServerCluster,
+    colorIcon: '#14b8a6',
+    items: [
+      {
+        description: 'Creación y mantenimiento de servidores y bases de datos.'
+      },
+      {
+        description:
+          'Uso de tecnologías como Node.js, Express, NestJS y bases de datos SQL y NoSQL.'
+      }
+    ]
+  },
+  {
+    title: 'Seguridad web',
+    Icon: MdSecurity,
+    colorIcon: '#ef4444',
+    items: [
+      {
+        description:
+          'Implementación de medidas de seguridad para proteger aplicaciones contra vulnerabilidades comunes.'
+      },
+      {
+        description: 'Auditorías de seguridad y pruebas de penetración.'
+      }
+    ]
+  },
+  {
+    title: 'Consultoría y asesoramiento',
+    Icon: GrDocumentConfig,
+    colorIcon: '#14b8a6',
+    items: [
+      {
+        description: 'Asesoramiento técnico para la planificación y ejecución de proyectos web.'
+      },
+      {
+        description: 'Recomendaciones sobre las mejores prácticas y tecnologías a utilizar.'
+      }
+    ]
+  },
+  {
+    title: 'Mantenimiento y soporte',
+    Icon: MdCleaningServices,
+    colorIcon: '#6b21a8 ',
+    items: [
+      {
+        description:
+          'Servicios de mantenimiento continuo para asegurar que los sitios web y aplicaciones funcionen sin problemas.'
+      },
+      {
+        description: 'Actualización y mejora de funcionalidades según sea necesario.'
+      }
+    ]
+  },
+  {
+    title: 'E-commerce:',
+    Icon: FaShoppingCart,
+    colorIcon: '#14b8a6',
+    items: [
+      {
+        description:
+          'Desarrollo de tiendas en línea utilizando plataformas como Shopify, WooCommerce, o soluciones personalizadas.'
+      },
+      {
+        description: 'Integración de pasarelas de pago y sistemas de gestión de inventarios.'
+      }
+    ]
+  }
+]
+---
+
+<Layout title='Jhonny'>
+  <main class='p-2 md:p-4'>
+    <header class='w-[400px] flex gap-8 items-center my-[30px] md:ml-8'>
+      <IoCreateSharp color='#fff' size={30} />
+      <span class='text-white text-4xl'>Servicios</span>
+    </header>
+  </main>
+  <section class='flex justify-center flex-wrap gap-4'>
+    {SERVICES.map(service => <ServiceItem {...service} />)}
+  </section>
+</Layout>
