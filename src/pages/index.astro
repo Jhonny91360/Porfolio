@@ -14,6 +14,7 @@ import { FaClipboardList } from 'react-icons/fa6'
 import { FaChildReaching } from 'react-icons/fa6'
 import { IoCreateSharp } from 'react-icons/io5'
 import Skills from '../components/Skills.astro'
+import CV_PDF from '../../public/CV-JhonnyZambranoSaavedra.pdf'
 ---
 
 <Layout title='Jhonny'>
@@ -56,7 +57,7 @@ import Skills from '../components/Skills.astro'
             type={TypeCard.TINY}
             name='Descargar C.V'
             className='text-white hidden md:flex bg-[#002C54] hover:bg-[#011f43]'
-            href='/public/CV-JhonnyZambranoSaavedra.pdf'
+            href={CV_PDF}
             target_blank={true}
           >
             <IoDocumentText slot='icon' color='#fff' size={100} />
@@ -67,7 +68,7 @@ import Skills from '../components/Skills.astro'
             type={TypeCard.TINY}
             name='⬇︎ C.V'
             className='text-white block md:hidden bg-[#002C54] hover:bg-[#011f43]'
-            href='/public/CV-JhonnyZambranoSaavedra.pdf'
+            href={CV_PDF}
             target_blank={true}
           >
             <IoDocumentText slot='icon' color='#fff' size={50} />

@@ -1,7 +1,12 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro'
 import Layout from '../layouts/Layout.astro'
-import { GrProjects, GrTechnology } from 'react-icons/gr'
+import { GrProjects } from 'react-icons/gr'
+import TEESA_PROJECT_IMAGE from '../../public/teesa-project-color.webp'
+import MOVIES_APP_PROJECT_IMAGE from '../../public/movie-box-project-color.webp'
+import REMINDER_APP_PROJECT_IMAGE from '../../public/reminder-app-project-color.webp'
+import FOOD_APP_IMAGE from '../../public/food-app-project-color.webp'
+import PORFOLIO_IMAGE from '../../public/porfolio-project-color.webp'
 
 const projects = [
   {
@@ -10,7 +15,7 @@ const projects = [
       'Tienda virtual para compra de equipos y repuestos de la industria alimenticia. Encuentra aquí lo que tu cocina necesita',
     technologies: ['React', 'Node', 'Tailwind', 'Express', 'PostgreSQL', 'Sequelize'],
     technologyColorTag: 'bg-[#14b8a6]',
-    image: '/public/teesa-project-color.webp',
+    image: TEESA_PROJECT_IMAGE.src,
     githubLink: 'https://github.com/Jhonny91360/Teesa_backend_SQL',
     deploy: 'https://www.youtube.com/watch?v=dADT42DSssU'
   },
@@ -19,7 +24,7 @@ const projects = [
     description: 'Aplicativo web con cientos de películas, series, video juegos y más.',
     technologies: ['Redux toolkit', 'Tailwind', 'React', 'Html', 'CSS'],
     technologyColorTag: 'bg-[#efb509]',
-    image: '/public/movie-box-project-color.webp',
+    image: MOVIES_APP_PROJECT_IMAGE.src,
     githubLink: 'https://github.com/Jhonny91360/movie-app',
     deploy: 'https://movie-app-three-dusky.vercel.app/'
   },
@@ -28,7 +33,7 @@ const projects = [
     description: 'Aplicativo móvil que te ayuda a recordar tareas en el día a día ',
     technologies: ['React Native', 'Typescript', 'SQLite', 'CSS'],
     technologyColorTag: 'bg-[#6b21a8]',
-    image: '/public/reminder-app-project-color.webp',
+    image: REMINDER_APP_PROJECT_IMAGE.src,
     githubLink: 'https://github.com/Jhonny91360/Reminder-app'
   },
   {
@@ -36,16 +41,16 @@ const projects = [
     description: 'Encuentra recetas de todas partes del mundo o crea tu propia receta y compártela',
     technologies: ['Redux', 'React', 'Node', 'Express', 'PostgreSQL', 'Sequelize'],
     technologyColorTag: 'bg-[#cd7213]',
-    image: '/public/food-app-project-color.webp',
+    image: FOOD_APP_IMAGE.src,
     githubLink: 'https://github.com/Jhonny91360/PI_Foods_APP',
     deploy: 'https://pi-foods-acx0ue8el-jhonny91360.vercel.app'
   },
   {
     title: 'Porfolio',
-    description: 'Mi porfolio donde doy a conocer mi perfil profesional como desarrollador web',
+    description: 'Mi porfolio donde doy a conocer mi perfil profesional como ingeniero de software',
     technologies: ['Astro', 'React', 'Tailwind', 'Javascript', 'HTML'],
     technologyColorTag: 'bg-[#ef4444]',
-    image: '/public/porfolio-project-color.webp',
+    image: PORFOLIO_IMAGE.src,
     githubLink: 'https://github.com/Jhonny91360/Porfolio',
     deploy: '/'
   }

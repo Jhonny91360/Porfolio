@@ -24,7 +24,7 @@ const { title } = Astro.props
     <section
       class='flex-col mx-auto max-w-[1120px] customScrollbar hiddenScrollbarVertical overflow-x-hidden'
     >
-      <Header client:only />
+      <Header transition:persist client:visible />
       <slot />
     </section>
   </body>
