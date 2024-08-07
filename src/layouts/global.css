@@ -28,6 +28,23 @@
     transform: translateY(0);
   }
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 .fromLeft {
   animation-name: slideInLeft;
   animation-duration: 1s;
@@ -38,6 +55,12 @@
   animation-duration: 1s;
   animation-timing-function: ease-in;
 }
+.fromRightFast {
+  animation-name: slideInRight;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
 .fromBottom {
   animation-name: slideInBottom;
   animation-duration: 2s;

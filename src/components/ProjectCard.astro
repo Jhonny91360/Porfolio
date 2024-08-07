@@ -9,8 +9,18 @@ interface Props {
   githubLink: string
   deploy?: string
   className?: string
+  technologyColorTag: string
 }
-const { title, description, githubLink, image, technologies, deploy, className } = Astro.props
+const {
+  title,
+  description,
+  githubLink,
+  image,
+  technologies,
+  deploy,
+  className,
+  technologyColorTag
+} = Astro.props
 ---
 
 <section
@@ -28,7 +38,9 @@ const { title, description, githubLink, image, technologies, deploy, className }
     {
       technologies.map(technology => {
         return (
-          <span class='bg-gradient-to-r fromLeft from-[#5a09ef] to-[#1a0538]  text-white text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300'>
+          <span
+            class={`${technologyColorTag} fromLeft text-white text-base font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300`}
+          >
             {technology}{' '}
           </span>
         )
@@ -36,7 +48,7 @@ const { title, description, githubLink, image, technologies, deploy, className }
     }
   </div>
   <img src={image} alt='' srcset='' class='rounded shadow-2xl shadow-white/10' />
-  <div class='flex flex-wrap gap-2 mt-auto items-center md:items-start text-[#efb509]'>
+  <div class='flex flex-wrap gap-2 mt-auto items-center md:items-start text-white'>
     {
       deploy && (
         <a

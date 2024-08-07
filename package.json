@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/react": "^3.3.4",
+    "@astrojs/react": "^3.6.1",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/baloo-2": "^5.0.19",
     "@types/react-dom": "^18.3.0",
@@ -24,6 +24,6 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@types/react": "^18.3.2"
+    "@types/react": "^18.3.3"
   }
 }

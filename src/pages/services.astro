@@ -115,7 +115,7 @@ const SERVICES = [
   {
     title: 'Mantenimiento y soporte',
     Icon: MdCleaningServices,
-    colorIcon: '#6b21a8 ',
+    colorIcon: '#6b21a8',
     items: [
       {
         description:
@@ -150,7 +150,7 @@ const SERVICES = [
       <span class='text-white text-4xl'>Servicios</span>
     </header>
   </main>
-  <section class='flex justify-center flex-wrap gap-4'>
+  <section class='flex justify-center flex-wrap gap-4 fadeIn'>
     {SERVICES.map(service => <ServiceItem {...service} />)}
   </section>
 </Layout>

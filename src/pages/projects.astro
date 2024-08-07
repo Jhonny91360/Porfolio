@@ -1,7 +1,7 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro'
 import Layout from '../layouts/Layout.astro'
-import { GrProjects } from 'react-icons/gr'
+import { GrProjects, GrTechnology } from 'react-icons/gr'
 
 const projects = [
   {
@@ -9,7 +9,8 @@ const projects = [
     description:
       'Tienda virtual para compra de equipos y repuestos de la industria alimenticia. Encuentra aquí lo que tu cocina necesita',
     technologies: ['React', 'Node', 'Tailwind', 'Express', 'PostgreSQL', 'Sequelize'],
-    image: '/public/teesa-project.webp',
+    technologyColorTag: 'bg-[#14b8a6]',
+    image: '/public/teesa-project-color.webp',
     githubLink: 'https://github.com/Jhonny91360/Teesa_backend_SQL',
     deploy: 'https://www.youtube.com/watch?v=dADT42DSssU'
   },
@@ -17,7 +18,8 @@ const projects = [
     title: 'Movies App',
     description: 'Aplicativo web con cientos de películas, series, video juegos y más.',
     technologies: ['Redux toolkit', 'Tailwind', 'React', 'Html', 'CSS'],
-    image: '/public/movie-box-project.webp',
+    technologyColorTag: 'bg-[#efb509]',
+    image: '/public/movie-box-project-color.webp',
     githubLink: 'https://github.com/Jhonny91360/movie-app',
     deploy: 'https://movie-app-three-dusky.vercel.app/'
   },
@@ -25,14 +27,16 @@ const projects = [
     title: 'Reminder App',
     description: 'Aplicativo móvil que te ayuda a recordar tareas en el día a día ',
     technologies: ['React Native', 'Typescript', 'SQLite', 'CSS'],
-    image: '/public/reminder-app-project.webp',
+    technologyColorTag: 'bg-[#6b21a8]',
+    image: '/public/reminder-app-project-color.webp',
     githubLink: 'https://github.com/Jhonny91360/Reminder-app'
   },
   {
     title: 'Food App',
     description: 'Encuentra recetas de todas partes del mundo o crea tu propia receta y compártela',
     technologies: ['Redux', 'React', 'Node', 'Express', 'PostgreSQL', 'Sequelize'],
-    image: '/public/food-app-project.webp',
+    technologyColorTag: 'bg-[#cd7213]',
+    image: '/public/food-app-project-color.webp',
     githubLink: 'https://github.com/Jhonny91360/PI_Foods_APP',
     deploy: 'https://pi-foods-acx0ue8el-jhonny91360.vercel.app'
   },
@@ -40,7 +44,8 @@ const projects = [
     title: 'Porfolio',
     description: 'Mi porfolio donde doy a conocer mi perfil profesional como desarrollador web',
     technologies: ['Astro', 'React', 'Tailwind', 'Javascript', 'HTML'],
-    image: '/public/porfolio-project.webp',
+    technologyColorTag: 'bg-[#ef4444]',
+    image: '/public/porfolio-project-color.webp',
     githubLink: 'https://github.com/Jhonny91360/Porfolio',
     deploy: '/'
   }
@@ -64,6 +69,7 @@ const projects = [
               technologies={project.technologies}
               githubLink={project.githubLink}
               deploy={project.deploy}
+              technologyColorTag={project.technologyColorTag}
               className={
                 index == 0 ? 'md:max-w-[50%]' : index == 1 ? 'md:max-w-[45%]' : 'md:max-w-[30%]'
               }
