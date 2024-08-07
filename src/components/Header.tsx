@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { TiThMenu } from 'react-icons/ti'
+import PROFILE_PHOTO from '../../public/perfil.png'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -7,7 +8,7 @@ const Header = () => {
     <>
       {/* desktop */}
       <header className='hidden md:flex items-center justify-between px-6 py-3 w-[20%] min-w-[150px] md:w-[1024px] mx-auto'>
-        <img className='rounded-full hidden md:block w-20 h-20' src='perfil.png' alt='' />
+        <img className='rounded-full hidden md:block w-20 h-20' src={PROFILE_PHOTO.src} alt='' />
         <nav className='flex flex-col md:flex-row gap-10 opacity-80 text-white'>
           <NavItems />
         </nav>
